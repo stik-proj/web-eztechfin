@@ -1,0 +1,295 @@
+.contact .section01 {
+  background-position: top right;
+  background-repeat: no-repeat;
+}
+
+.contact-process {
+  background-color: #fff;
+}
+
+.contact-process .contact-process-content {
+  display: flex;
+}
+
+.contact .section01 .tit,
+.contact .section02 .tit {
+  font-weight: 800;
+  color: #282C34;
+}
+
+.contact .section01 .desc,
+.contact .section02 .desc {
+  letter-spacing: -0.2;
+  color: #585D65;
+  letter-spacing: -0.02em
+}
+
+.contact .section02,
+.contact .section03 {
+  background-color: #F9F9FD   ;
+}
+
+.contact-process .contact-process-content .tit {
+  font-weight: 700;
+}
+
+.contact-process .process-step .process-step-number {
+  color: #fff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.contact .contact-info-item {
+  display: flex;
+  align-items: center;
+}
+
+.contact .contact-info-item .contact-info-content {
+  letter-spacing: -0.02em;
+  color: #2b2c34;
+}
+
+@media only screen and (max-width: 1024px) {
+  .contact .section01 {
+    padding-top: 8rem;
+    background: url('/static/img/contact_bg.svg') top right / 173px 173px no-repeat, linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #F9F9FD 100%);
+  }
+
+  .contact .section01 .tit,
+  .contact .section02 .tit {
+    font-size: 2rem;
+    line-height: 2.4rem;
+  }
+  
+  .contact .section01 .desc,
+  .contact .section02 .desc {
+    padding-top: 1.6rem;
+    font-size: 1.1rem;
+    line-height: 1.4rem;
+  }
+
+  .contact-process-list {
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+  }
+  
+  .contact-process {
+    box-shadow: -2px 2px 8px rgba(6, 16, 34, 0.04);
+    border-radius: 4px;
+    border-top-right-radius: 0;
+    padding: 1.429rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .contact-process + .contact-process {
+    margin-top: 2.4rem;
+  }
+  
+  .contact-process .contact-process-content {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .contact-process .contact-process-content .step-img{
+    width: 4rem;
+    height: 4rem;
+    margin-right: 1.2rem;
+  }
+
+  .contact-process .contact-process-content .tit{
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+    letter-spacing: -0.02em;
+  }
+
+  .contact-process .contact-process-content .desc{
+    font-size: 1.1rem;
+    line-height: 1.4rem;
+    padding-top: 0.8rem;
+  }
+
+  .contact-process .process-step {
+    width: 9rem;
+    height: 9rem;
+    border-radius: 4.5rem;
+    background-color: #3276FF;
+    position: absolute;
+    right: -4.5rem;
+    top: -4.5rem;
+  }
+
+  .contact-process .process-step .process-step-number {
+    width: 4.5rem;
+    height: 4.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+    font-weight: 300;
+    padding-left: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .contact .contact-info-list {
+    padding: 3.2rem 0;
+  }
+
+  .contact .contact-info-item + .contact-info-item {
+    margin-top: 0.8rem;
+  }
+
+  .contact .contact-info-item .contact-info-img {
+    width: 4rem;
+    height: 4rem;
+    margin-right: 2.4rem;
+  }
+
+  .contact .contact-info-item .contact-info-content {
+    font-size: 1.1rem;
+    line-height: 1.4rem;
+  }
+
+  .contact .section03 {
+    padding-bottom: 4rem;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .contact .section01 {
+    padding-top: var(--160-pc-rem);
+    background: url('/static/img/contact_bg.svg') top right / 735px 735px no-repeat, linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #F9F9FD 100%);
+  }
+
+  .contact .section01 .tit,
+  .contact .section02 .tit {
+    font-size: var(--48-pc-rem);
+    line-height: var(--58-pc-rem);
+  }
+  
+  .contact .section01 .desc,
+  .contact .section02 .desc {
+    padding-top: var(--32-pc-rem);
+    font-size: var(--20-pc-rem);
+    line-height: 2rem;
+  }
+
+  .contact-process-list {
+    padding-top: var(--100-pc-rem);
+    padding-bottom: var(--160-pc-rem);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+  
+  .contact-process {
+    box-shadow: -2px 2px 16px rgba(6, 16, 34, 0.06);
+    border-radius: 16px;
+    border-top-right-radius: 0;
+    padding: var(--40-pc-rem);
+    position: relative;
+    overflow: hidden;
+    max-width: 520px;
+    min-height: 326px;
+    flex-shrink: 0;
+  }
+
+  .contact-process:nth-child(2) {
+    margin-top: var(--110-pc-rem);
+  }
+
+  .contact-process:nth-child(2n) {
+    margin-left: var(--80-pc-rem);
+  }
+
+  .contact-process:nth-child(2n + 3) {
+    margin-top: calc(-1 * var(--50-pc-rem));
+  }
+
+  .contact-process:nth-child(2n + 4) {
+    margin-top: var(--60-pc-rem);
+  }
+
+  
+  .contact-process .contact-process-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .contact-process .contact-process-content .step-img{
+    width: var(--104-pc-rem);
+    height: var(--104-pc-rem);
+  }
+
+  .contact-process .contact-process-content .tit{
+    font-size: var(--32-pc-rem);
+    line-height: var(--38-pc-rem);
+    padding-left: var(--16-pc-rem);
+    letter-spacing: -0.02em;
+  }
+
+  .contact-process .contact-process-content .desc{
+    font-size: var(--20-pc-rem);
+    line-height: var(--28-pc-rem);
+    padding-left: var(--16-pc-rem);
+    padding-top: 0.8rem;
+  }
+
+  .contact-process .process-step {
+    width: var(--188-pc-rem);
+    height: var(--188-pc-rem);
+    border-radius: var(--94-pc-rem);
+    background-color: #3276FF;
+    position: absolute;
+    right: calc(-1 * var(--94-pc-rem));
+    top: calc(-1 * var(--94-pc-rem));
+  }
+
+  .contact-process .process-step .process-step-number {
+    width: var(--94-pc-rem);
+    height: var(--94-pc-rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: var(--32-pc-rem);
+    line-height: var(--38-pc-rem);
+    font-weight: 300;
+    padding-left: 1rem;
+    padding-bottom: 1rem;
+  }
+  
+  .contact .section02 {
+    padding-bottom: var(--80-pc-rem);
+  }
+
+  .contact .section02 .inner-contents {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .contact-info-list {
+    min-width: 530px;
+  }
+
+  .contact .contact-info-item + .contact-info-item {
+    margin-top: var(--16-pc-rem);
+  }
+
+  .contact .contact-info-item .contact-info-img {
+    width: var(--80-pc-rem);
+    height: var(--80-pc-rem);
+    margin-right: var(--24-pc-rem);
+  }
+
+  .contact .contact-info-item .contact-info-content {
+    font-size: var(--20-pc-rem);
+    line-height: var(--28-pc-rem);
+  }
+
+  .contact .section03 {
+    padding-bottom: var(--120-pc-rem);
+  }
+}
