@@ -13,7 +13,7 @@ body {
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   font-size: 14px;
   line-height: 100%;
-  color: #000;
+  color: #282c34;
   font-weight: 400;
   background: #fff;
 }
@@ -95,7 +95,7 @@ h6 {
   font-weight: normal;
   margin: 0;
   padding: 0;
-  color: #000;
+  color: #282c34;
 }
 
 html,
@@ -166,7 +166,7 @@ p {
 
 a {
   text-decoration: none;
-  color: #000;
+  color: #282c34;
   vertical-align: top;
 }
 
@@ -174,7 +174,7 @@ a:link,
 a:visited,
 button {
   text-decoration: none;
-  color: #000;
+  color: #282c34;
 }
 
 a:hover,
@@ -182,7 +182,7 @@ a:active,
 a:focus {
   outline: 0 none;
   text-decoration: none;
-  color: #000;
+  color: #282c34;
 }
 
 table {
