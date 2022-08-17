@@ -7,6 +7,7 @@ ui.page.common.prototype = {
   init: function () {
     this._assignElements();
     this._attachEventHandlers();
+
     this._ready();
   },
   _assignElements: function () {
@@ -38,6 +39,21 @@ ui.page.common.prototype = {
       $.proxy(this._closeMobileGnbMenu, this)
     );
   },
+  _onScrollEvent: function (e) {
+    const self = this;
+    $(window).scroll(function (e) {
+      self._handleHeaderTransform();
+    });
+  },
+  _handleHeaderTransform: function () {
+    let nScrollTop = $("body").scrollTop();
+    console.log(nScrollTop);
+    if (nScrollTop > 20) {
+      $(".header").addClass("active");
+    } else {
+      $(".header").removeClass("active");
+    }
+  },
   _onClickEventPrevent: function (event) {
     event.preventDefault();
   },
@@ -60,6 +76,8 @@ ui.page.common.prototype = {
     $(".gnb").removeClass("show");
   },
 
-  _ready: function () {},
+  _ready: function () {
+    this._onScrollEvent();
+  },
 };
 var uiCommon = new ui.page.common();
