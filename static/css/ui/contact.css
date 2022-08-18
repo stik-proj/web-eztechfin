@@ -19,7 +19,6 @@
 
 .contact .section01 .desc,
 .contact .section02 .desc {
-  letter-spacing: -0.2;
   color: #585D65;
   letter-spacing: -0.02em
 }
@@ -163,6 +162,10 @@
     background: url('/static/img/contact_bg.svg') top right / 735px 735px no-repeat, linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #F9F9FD 100%);
   }
 
+  .contact .inner-contents {
+    padding: 0 var(--100-pc-rem);
+  }
+
   .contact .section01 .tit,
   .contact .section02 .tit {
     font-size: var(--48-pc-rem);
@@ -268,6 +271,7 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    padding-left: var(--120-pc-rem);
   }
 
   .contact-info-list {

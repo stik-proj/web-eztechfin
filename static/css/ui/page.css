@@ -58,9 +58,17 @@ body {
   .m-block {
     display: block;
   }
+
+  .pc-show {
+    display: none;
+  }
 }
 @media only screen and (min-width: 1024px) {
   .pc-block {
+    display: block;
+  }
+
+  .pc-show {
     display: block;
   }
 }
