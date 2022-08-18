@@ -8,9 +8,23 @@ body {
   overflow: hidden;
   /* width: 100%; */
 }
+.right-contents {
+  display: flex;
+  justify-content: flex-end;
+}
 .container {
   padding-bottom: 6rem;
 }
+.txt-orange {
+  color: #ff6100;
+}
+.txt-blue {
+  color: #3276ff;
+}
+.txt-green {
+  color: #b3da2e;
+}
+
 .btn {
   display: inline-block;
   appearance: none;
@@ -20,7 +34,7 @@ body {
   letter-spacing: 0.2px;
   font-size: 1.1428rem;
   line-height: 3.9285rem;
-  padding: 0 3.428rem;
+  text-align: center;
   background: transparent;
 }
 .btn.btn-black {
@@ -29,7 +43,15 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.7);
 }
 .btn.btn-radius {
-  border-radius: 90px;
+  border-radius: 4px;
+}
+.btn.btn-orange {
+  color: #fff;
+  background: #ff6100;
+}
+.btn.btn-green {
+  color: #fff;
+  background: #b3da2e;
 }
 .m-gnb-menu,
 .btn-close {
@@ -37,12 +59,7 @@ body {
   padding: 0;
   cursor: pointer;
 }
-.txt-orange {
-  color: #715df0 !important;
-}
-.txt-white {
-  color: #fff !important;
-}
+
 .inner-contents {
   position: relative;
   max-width: 1440px;
@@ -792,5 +809,261 @@ body {
     width: auto;
     right: 0;
     bottom: 10%;
+  }
+}
+
+/* 서비스 */
+.service .section01 {
+  padding: 8rem 0;
+}
+.service .section01 .section-desc {
+  margin-top: 3rem;
+}
+.service_list {
+}
+.service_list > div {
+  margin-top: 7.5rem;
+  width: 100%;
+  text-align: center;
+}
+.service_list .box {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  text-align: left;
+  padding: 2rem;
+  background: #fff;
+  box-shadow: -2px 2px 8px rgba(6, 16, 34, 15%);
+  border-radius: 4px;
+}
+.service_list .box + .box {
+  margin-top: 2.4rem;
+}
+.service_list .box .img {
+  text-align: center;
+}
+.service_list .box .btn {
+  margin-top: 1.2rem;
+  width: 9.3rem;
+  height: 2.8rem;
+  line-height: 2.7rem;
+  font-weight: 700;
+}
+.service_list .box span {
+  display: inline-block;
+  padding-left: 1rem;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+.service_list .box .tit {
+  margin-top: 0.6rem;
+  padding-left: 1rem;
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: #282c34;
+}
+.service_list .box .desc {
+  margin-top: 4.8rem;
+  font-weight: 400;
+  font-size: 1.1rem;
+  line-height: 1.4rem;
+}
+@media only screen and (min-width: 1024px) {
+  .service_list {
+    display: flex;
+    justify-content: center;
+  }
+  .service_list > div:last-child {
+    margin-top: 23.928rem;
+    margin-left: 5.714rem;
+  }
+  .service_list .box {
+    padding: 4.285rem 3.428rem;
+    min-height: 33.928rem;
+  }
+  .service_list .box + .box {
+    margin-top: 5.714rem;
+    min-height: 27.642rem;
+  }
+
+  .service_list .box + .box .desc {
+    margin-top: 3.285rem;
+  }
+  .service_list .box img {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 70%;
+    transform: translateY(-22%) translateX(5rem);
+  }
+  .service_list .box span {
+    padding-left: 0;
+    font-size: 1.142rem;
+    line-height: 1.357rem;
+  }
+  .service_list .box .tit {
+    margin-top: 0.57rem;
+    padding-left: 0;
+    font-size: 2.285rem;
+    line-height: 2.714rem;
+  }
+  .service_list .box .btn {
+    margin-top: 2.285rem;
+    width: 9.714rem;
+    height: 3.714rem;
+    line-height: 3.7rem;
+  }
+  .service_list .box .desc {
+    margin-top: 7.285rem;
+    font-size: 1.428rem;
+    line-height: 2rem;
+  }
+}
+.service .section02 {
+  padding: 4.5rem 0;
+  background: url("../../img/bg_roadmap.png") 0 0 no-repeat;
+  background-size: cover;
+}
+.wrap_roadmap {
+  margin-top: 3.2rem;
+}
+
+.wrap_roadmap > div {
+  position: relative;
+  display: flex;
+}
+.wrap_roadmap > div .year {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 5.6rem;
+  height: 5.6rem;
+  font-size: 1.4rem;
+  color: #fff;
+  background: #d6e3ff;
+  border-radius: 100%;
+}
+
+.wrap_roadmap > div:nth-child(2):before {
+  background: linear-gradient(#a4c2ff, #71a0ff);
+}
+.wrap_roadmap > div:nth-child(3):before {
+  background: linear-gradient(#71a0ff, #3276ff);
+}
+.wrap_roadmap > div:last-child:before {
+  display: none;
+}
+.wrap_roadmap > div:nth-child(2) .year {
+  background: #a4c2ff;
+}
+.wrap_roadmap > div:nth-child(3) .year {
+  background: #71a0ff;
+}
+.wrap_roadmap > div:nth-child(4) .year {
+  background: #3276ff;
+}
+.wrap_roadmap > div .list {
+  position: relative;
+  padding-left: 4.6rem;
+}
+.wrap_roadmap > div .list:before {
+  position: absolute;
+  top: 2.8rem;
+  left: 0;
+  display: block;
+  width: 2.4rem;
+  height: 1px;
+  background: #3276ff;
+  content: "";
+}
+.wrap_roadmap > div .list:after {
+  position: absolute;
+  top: 2.8rem;
+  left: 2.4rem;
+  display: block;
+  width: 0.6rem;
+  height: 0.6rem;
+  margin-top: -0.225rem;
+  background: #3276ff;
+  border-radius: 100%;
+  content: "";
+}
+.wrap_roadmap > div .list p {
+  margin-top: 2.1rem;
+  font-weight: 700;
+  font-size: 1.4rem;
+  line-height: 1.7rem;
+  color: #202020;
+}
+.wrap_roadmap > div .list ul {
+  margin-top: 0.8rem;
+  margin-left: 0.5rem;
+}
+.wrap_roadmap > div .list ul li {
+  position: relative;
+  padding-left: 0.8rem;
+  font-weight: 400;
+  font-size: 1.1rem;
+  line-height: 1.4rem;
+  color: #282c34;
+}
+.wrap_roadmap > div .list ul li:before {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 0.2rem;
+  height: 0.2rem;
+  margin-top: -0.1rem;
+  background: #282c34;
+  border-radius: 100%;
+  content: "";
+}
+.wrap_roadmap > div + div {
+  margin-top: 1.5rem;
+}
+@media only screen and (min-width: 1024px) {
+  .wrap_roadmap {
+    display: flex;
+  }
+  .wrap_roadmap > div + div {
+    margin-top: 0;
+  }
+  .wrap_roadmap > div {
+    width: 33%;
+    flex-direction: column;
+  }
+  .wrap_roadmap > div .year {
+    width: 12.857rem;
+    height: 12.857rem;
+    font-size: 2.571rem;
+  }
+  .wrap_roadmap > div .list {
+    margin-top: 5.714rem;
+    padding-left: 10.6rem;
+  }
+  .wrap_roadmap > div .list:before,
+  .wrap_roadmap > div .list:after {
+    display: none;
+  }
+  .wrap_roadmap > div .list > li {
+    position: relative;
+  }
+  .wrap_roadmap > div .list > li:before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: block;
+    width: 1.1428rem;
+    height: 1.1428rem;
+    border-radius: 100%;
+    background: #d6e3ff;
+    transform: translateX(-4.9rem);
+    content: "";
+  }
+  .wrap_roadmap > div .list > li + li {
+    margin-top: 5.142rem;
+  }
+  .wrap_roadmap > div .list > li p {
+    margin-top: 0;
   }
 }
