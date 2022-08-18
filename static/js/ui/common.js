@@ -5,6 +5,7 @@ ui.page.common = function () {
 };
 ui.page.common.prototype = {
   init: function () {
+    this._initCustomElements();
     this._assignElements();
     this._attachEventHandlers();
 
@@ -79,5 +80,92 @@ ui.page.common.prototype = {
   _ready: function () {
     this._onScrollEvent();
   },
+
+  _createCustomAppbar: function() {
+    class Appbar extends HTMLElement {
+      render() {
+        this.innerHTML = `<header class="header">
+        <div class="inner-contents">
+          <h1 class="logo">
+            <a href="/">EZTECHFIN</a>
+          </h1>
+          <div class="header-menu">
+            <button class="btn m-gnb-menu _openMobileGnbMenu">
+              <img src="/static/img/ico_menu.svg" alt="" />
+            </button>
+            <nav class="gnb">
+              <ul id="menu">
+                <li class="current">
+                  <a href="#">Company</a>
+                </li>
+                <li>
+                  <a href="#">Service</a>
+                </li>
+                <li>
+                  <a href="#">Recruit</a>
+                </li>
+                <li>
+                  <a href="#">Contact</a>
+                </li>
+              </ul>
+              <button class="btn btn-close _closeMobileGnbMenu">
+                <i class="mdi mdi-close"></i>
+              </button>
+            </nav>
+          </div>
+        </div>
+      </header>`;
+      }
+
+      connectedCallback() {
+        if (!this.rendered) {
+          this.render();
+          this.rendered = true;
+        }
+      }
+    }
+
+    customElements.define("app-bar", Appbar);
+  },
+
+  _createCustomFooter: function() {
+    class Footer extends HTMLElement {
+      render() {
+        this.innerHTML = `<footer class="footer">
+        <div class="inner-contents">
+          <img class="logo" src="/static/img/img_logo_white.png" alt="">
+          <div>
+            <ul>
+              <li>서울 마포구 월드컵북로56길 12, 10층 1호</li>
+              <li><em>고객센터</em><a href="tel:070-7841-1330">070-7841-1330</a> <a href="mailto:cs@eztechfin.co.kr">cs@eztechfin.co.kr</a></li>
+              <li><p class="copy">© 2022 (주)이지테크핀., All rights reserved.</p></li>
+            </ul>
+          </div>
+          <div>
+            <ul>
+              <li><em>대표이사</em>조성현</li>
+              <li><em>사업자등록번호</em>315-87-01407 사업자정보확인</li>
+              <li><em>통신판매업신고번호</em>제2022-서울마포-1771</li>
+            </ul>
+          </div>
+        </div>
+      </footer>`;
+      }
+
+      connectedCallback() {
+        if (!this.rendered) {
+          this.render();
+          this.rendered = true;
+        }
+      }
+    }
+
+    customElements.define("default-footer", Footer);
+  },
+
+  _initCustomElements: function() {
+    this._createCustomAppbar();
+    this._createCustomFooter();
+  }
 };
 var uiCommon = new ui.page.common();

@@ -17,37 +17,8 @@
   </head>
   <body>
     <div class="wrap">
-      <header class="header">
-        <div class="inner-contents">
-          <h1 class="logo">
-            <a href="/">EZTECHFIN</a>
-          </h1>
-          <div class="header-menu">
-            <button class="btn m-gnb-menu _openMobileGnbMenu">
-              <img src="../static/img/ico_menu.svg" alt="" />
-            </button>
-            <nav class="gnb">
-              <ul id="menu">
-                <li class="current">
-                  <a href="#">Company</a>
-                </li>
-                <li>
-                  <a href="#">Service</a>
-                </li>
-                <li>
-                  <a href="#">Recruit</a>
-                </li>
-                <li>
-                  <a href="#">Contact</a>
-                </li>
-              </ul>
-              <button class="btn btn-close _closeMobileGnbMenu">
-                <i class="mdi mdi-close"></i>
-              </button>
-            </nav>
-          </div>
-        </div>
-      </header>
+      <app-bar></app-bar>
+
       <div class="container recruit">
         <section class="section section01">
           <div class="inner-contents">
@@ -204,8 +175,8 @@
             </ul>
           </div>
         </section>
-        </div>
       </div>
+      <default-footer></default-footer>
     </div>
     <script src="../static/js/lib/jquery-3.6.0.min.js"></script>
     <script src="../static/js/lib/jquery.fullpage.min.js"></script>
