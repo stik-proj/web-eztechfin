@@ -4,41 +4,39 @@
 @import "/static/css/lib/jquery.fullpage.min.css";
 @import "/static/css/ui/page.css"; */
 
-
 @import "font.css";
 @import "reset.css";
 @import "../lib/jquery.fullpage.min.css";
 @import "page.css";
-@import "contact.css";
-@import "recruit.css";
 
 :root {
-  --14-pc-rem: calc(14/14 * 1rem);
-  --16-pc-rem: calc(16/14 * 1rem);
-  --20-pc-rem: calc(20/14 * 1rem);
-  --24-pc-rem: calc(24/14 * 1rem);
-  --28-pc-rem: calc(28/14 * 1rem);
-  --32-pc-rem: calc(32/14 * 1rem);
-  --38-pc-rem: calc(38/14 * 1rem);
-  --40-pc-rem: calc(40/14 * 1rem);
-  --48-pc-rem: calc(48/14 * 1rem);
-  --50-pc-rem: calc(50/14 * 1rem);
-  --58-pc-rem: calc(58/14 * 1rem);
-  --60-pc-rem: calc(60/14 * 1rem);
-  --64-pc-rem: calc(64/14 * 1rem);
-  --72-pc-rem: calc(72/14 * 1rem);
-  --80-pc-rem: calc(80/14 * 1rem);
-  --94-pc-rem: calc(94/14 * 1rem);
-  --100-pc-rem: calc(100/14 * 1rem);
-  --104-pc-rem: calc(104/14 * 1rem);
-  --110-pc-rem: calc(110/14 * 1rem);
-  --120-pc-rem: calc(120/14 * 1rem);
-  --140-pc-rem: calc(140/14 * 1rem);
-  --160-pc-rem: calc(160/14 * 1rem);
-  --188-pc-rem: calc(188/14 * 1rem);
-  --200-pc-rem: calc(200/14 * 1rem);
-  --240-pc-rem: calc(240/14 * 1rem);
-  --310-pc-rem: calc(310/14 * 1rem);
-  --340-pc-rem: calc(340/14 * 1rem);
-  --450-pc-rem: calc(450/14 * 1rem);
+  --14-pc-rem: calc(14 / 14 * 1rem);
+  --16-pc-rem: calc(16 / 14 * 1rem);
+  --20-pc-rem: calc(20 / 14 * 1rem);
+  --24-pc-rem: calc(24 / 14 * 1rem);
+  --28-pc-rem: calc(28 / 14 * 1rem);
+  --32-pc-rem: calc(32 / 14 * 1rem);
+  --38-pc-rem: calc(38 / 14 * 1rem);
+  --40-pc-rem: calc(40 / 14 * 1rem);
+  --48-pc-rem: calc(48 / 14 * 1rem);
+  --50-pc-rem: calc(50 / 14 * 1rem);
+  --58-pc-rem: calc(58 / 14 * 1rem);
+  --60-pc-rem: calc(60 / 14 * 1rem);
+  --64-pc-rem: calc(64 / 14 * 1rem);
+  --72-pc-rem: calc(72 / 14 * 1rem);
+  --80-pc-rem: calc(80 / 14 * 1rem);
+  --94-pc-rem: calc(94 / 14 * 1rem);
+  --100-pc-rem: calc(100 / 14 * 1rem);
+  --104-pc-rem: calc(104 / 14 * 1rem);
+  --110-pc-rem: calc(110 / 14 * 1rem);
+  --120-pc-rem: calc(120 / 14 * 1rem);
+  --140-pc-rem: calc(140 / 14 * 1rem);
+  --160-pc-rem: calc(160 / 14 * 1rem);
+  --180-pc-rem: calc(180 / 14 * 1rem);
+  --188-pc-rem: calc(188 / 14 * 1rem);
+  --200-pc-rem: calc(200 / 14 * 1rem);
+  --240-pc-rem: calc(240 / 14 * 1rem);
+  --310-pc-rem: calc(310 / 14 * 1rem);
+  --340-pc-rem: calc(340 / 14 * 1rem);
+  --450-pc-rem: calc(450 / 14 * 1rem);
 }

@@ -8,7 +8,6 @@ ui.page.common.prototype = {
     this._initCustomElements();
     this._assignElements();
     this._attachEventHandlers();
-
     this._ready();
   },
   _assignElements: function () {
@@ -18,11 +17,6 @@ ui.page.common.prototype = {
       "click",
       'a[href="#"]',
       $.proxy(this._onClickEventPrevent, this)
-    );
-    this.welDoc.on(
-      "click",
-      "._toggleTranslateMenu",
-      $.proxy(this._toggleTranslatebox, this)
     );
     this.welDoc.on(
       "click",
@@ -48,7 +42,7 @@ ui.page.common.prototype = {
   },
   _handleHeaderTransform: function () {
     let nScrollTop = $("body").scrollTop();
-    console.log(nScrollTop);
+
     if (nScrollTop > 20) {
       $(".header").addClass("active");
     } else {
@@ -65,11 +59,6 @@ ui.page.common.prototype = {
       $.proxy(this._onClickEventPrevent, this)
     );
   },
-  _toggleTranslatebox: function (e) {
-    const target = $(e.currentTarget);
-    target.parent(".translate").toggleClass("show");
-    console.log(target);
-  },
   _openMobileGnbMenu: function () {
     $(".gnb").addClass("show");
   },
@@ -81,7 +70,7 @@ ui.page.common.prototype = {
     this._onScrollEvent();
   },
 
-  _createCustomAppbar: function() {
+  _createCustomAppbar: function () {
     class Appbar extends HTMLElement {
       render() {
         this.innerHTML = `<header class="header">
@@ -96,16 +85,16 @@ ui.page.common.prototype = {
             <nav class="gnb">
               <ul id="menu">
                 <li class="current">
-                  <a href="#">Company</a>
+                  <a href="/">Company</a>
                 </li>
                 <li>
-                  <a href="#">Service</a>
+                  <a href="/html/service.html">Service</a>
                 </li>
                 <li>
-                  <a href="#">Recruit</a>
+                  <a href="/html/recruit.html">Recruit</a>
                 </li>
                 <li>
-                  <a href="#">Contact</a>
+                  <a href="/html/contact.html">Contact</a>
                 </li>
               </ul>
               <button class="btn btn-close _closeMobileGnbMenu">
@@ -120,6 +109,7 @@ ui.page.common.prototype = {
       connectedCallback() {
         if (!this.rendered) {
           this.render();
+
           this.rendered = true;
         }
       }
@@ -127,8 +117,18 @@ ui.page.common.prototype = {
 
     customElements.define("app-bar", Appbar);
   },
+  _checkCurrentGnbMenu: function () {
+    const elMenu = $(".gnb li");
+    const loc = location.pathname;
 
-  _createCustomFooter: function() {
+    elMenu.each(function (index) {
+      const sMenuText = $(this).children().text().toLowerCase();
+      if (loc.includes(sMenuText)) {
+        elMenu.eq(index).addClass("current").siblings().removeClass("current");
+      }
+    });
+  },
+  _createCustomFooter: function () {
     class Footer extends HTMLElement {
       render() {
         this.innerHTML = `<footer class="footer">
@@ -163,9 +163,10 @@ ui.page.common.prototype = {
     customElements.define("default-footer", Footer);
   },
 
-  _initCustomElements: function() {
+  _initCustomElements: function () {
     this._createCustomAppbar();
     this._createCustomFooter();
-  }
+    this._checkCurrentGnbMenu();
+  },
 };
 var uiCommon = new ui.page.common();

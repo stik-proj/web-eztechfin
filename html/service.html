@@ -17,37 +17,7 @@
   </head>
   <body>
     <div class="wrap">
-      <header class="header">
-        <div class="inner-contents">
-          <h1 class="logo">
-            <a href="/">EZTECHFIN</a>
-          </h1>
-          <div class="header-menu">
-            <button class="btn m-gnb-menu _openMobileGnbMenu">
-              <img src="../static/img/ico_menu.svg" alt="" />
-            </button>
-            <nav class="gnb">
-              <ul id="menu">
-                <li class="current">
-                  <a href="#">Company</a>
-                </li>
-                <li>
-                  <a href="#">Service</a>
-                </li>
-                <li>
-                  <a href="#">Recruit</a>
-                </li>
-                <li>
-                  <a href="#">Contact</a>
-                </li>
-              </ul>
-              <button class="btn btn-close _closeMobileGnbMenu">
-                <i class="mdi mdi-close"></i>
-              </button>
-            </nav>
-          </div>
-        </div>
-      </header>
+      <app-bar></app-bar>
       <div class="container service">
         <section class="section section01">
           <div class="inner-contents">
@@ -58,9 +28,9 @@
                 범용적으로 활용이 가능한 기술을 구현하고 서비스를 제공합니다. <br />
                 21세기는 이제 4차 산업혁명의 시대입니다.<br />
                 보다 넓은 범위에 적용되는 기술로 더 빠르고 정확하게, <br />
-                우수한 기술력을 바탕으로 <br />
+                <span class="m-block">우수한 기술력을 바탕으로 </span>
                 좋은 성과를 창출해 내는 기술을 계속 구현해 나갑니다. <br />
-                경제, 사회, 비즈니스와 융합되어 혁신을 이끄는 <br />
+                <span class="m-block">경제, 사회, 비즈니스와 융합되어 혁신을 이끄는 </span>
                 이지테크핀의 기술력을 소개 합니다.
               </p>
             </div>
@@ -115,15 +85,17 @@
               </div>
             </div>
           </div>
+          <img class="bg01" src="../static/img/ico_service_circle.svg" alt=""/>
+          <img class="bg02" src="../static/img/ico_service_circle.svg" alt=""/>
         </section>
         <section class="section section02">
           <div class="inner-contents">
             <h3 class="section-title">Roadmap</h3>
             <p class="section-desc">
-              거친 파도를 넘어 바다로 나아가지 않는다면<br />
-              우리는 결코 신대륙을 발견할 수 없습니다. <br />
-              빠르게 변화하는 기술 시장의 동향을 철저하게 분석하고,<br />
-              한 발 먼저 성장해 나가며<br />
+              <span class="pc-block"> 거친 파도를 넘어 바다로 나아가지 않는다면
+              <span class="m-block">우리는 결코 신대륙을 발견할 수 없습니다. </span></span>
+              <span class="pc-block"><span class="m-block">빠르게 변화하는 기술 시장의 동향을 철저하게 분석하고,</span>
+              <span class="m-block">한 발 먼저 성장해 나가며</span></span>
               시장의 모범이 되는 방향을 제시해 나아가겠습니다.
             </p>
             <div class="wrap_roadmap">
@@ -213,34 +185,12 @@
         </section>
    
         </div>
-        <footer class="footer">
-          <div class="inner-contents">
-            <img class="logo" src="../static/img/img_logo_white.png" alt="">
-            <div>
-              <ul>
-                <li>서울 마포구 월드컵북로56길 12, 10층 1호</li>
-                <li><em>고객센터</em><a href="tel:070-7841-1330">070-7841-1330</a> <a href="mailto:cs@eztechfin.co.kr">cs@eztechfin.co.kr</a></li>
-                <li><p class="copy">© 2022 (주)이지테크핀., All rights reserved.</p></li>
-              </ul>
-            </div>
-            <div>
-              <ul>
-                <li><em>대표이사</em>조성현</li>
-                <li><em>사업자등록번호</em>315-87-01407 사업자정보확인</li>
-                <li><em>통신판매업신고번호</em>제2022-서울마포-1771</li>
-              </ul>
-            </div>
-          </div>
-        </footer>
+        <default-footer></default-footer>
         
       </div>
       
     </div>
     <script src="../static/js/lib/jquery-3.6.0.min.js"></script>
-    <script src="../static/js/lib/jquery.fullpage.min.js"></script>
-    <script src="../static/js/lib/scrolloverflow.js"></script>
-    <script src="../static/js/lib/masonry.pkgd.min.js"></script>
     <script src="../static/js/ui/common.js"></script>
-    <script type="text/javascript"></script>
   </body>
 </html>

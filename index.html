@@ -7,49 +7,13 @@
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
     />
     <link rel="stylesheet" type="text/css" href="./static/css/ui/style.css" />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://cdn.jsdelivr.net/npm/@mdi/font@6.5.95/css/materialdesignicons.min.css"
-    />
-
     <title>EZTECHFIN</title>
   </head>
   <body>
     <div class="wrap">
-      <header class="header">
-        <div class="inner-contents">
-          <h1 class="logo">
-            <a href="/">EZTECHFIN</a>
-          </h1>
-          <div class="header-menu">
-            <button class="btn m-gnb-menu _openMobileGnbMenu">
-              <img src="./static/img/ico_menu.svg" alt="" />
-            </button>
-            <nav class="gnb">
-              <ul id="menu">
-                <li class="current">
-                  <a href="#">Company</a>
-                </li>
-                <li>
-                  <a href="#">Service</a>
-                </li>
-                <li>
-                  <a href="#">Recruit</a>
-                </li>
-                <li>
-                  <a href="#">Contact</a>
-                </li>
-              </ul>
-              <button class="btn btn-close _closeMobileGnbMenu">
-                <i class="mdi mdi-close"></i>
-              </button>
-            </nav>
-          </div>
-        </div>
-      </header>
+      <app-bar></app-bar>
       <div class="container company">
-        <section class="section section01">
+        <section id="mainVisual" class="section section01 active">
           <div class="inner-contents">
             <h2 class="tit">
               디지털 파트너와
@@ -81,24 +45,29 @@
               <span class="m-block pc-block">전통적 금융시장의 변화, 새로운 디지털 자산의 등장, 불편한 서비스.</span>
               변화의 중심에서 이지테크핀은 혁신을 만들어냅니다.
             </p>
-            <ul class="mission_list">
-              <li>
+            <ul id="section03" class="mission_list">
+              <li id="opt1">
+                <div>
                 <img src="./static/img/ico_mission_01.svg" alt="" />
                 <p class="tit">쉬운 접근성</p>
                 <p class="desc">
                   <span class="m-block pc-block"> 기술 이용의 편리함을 목표로 합니다.</span> 모든 사람이 사용하기 편리한
                   기술을 만들기 위해 끊임없이 고민하고 검증합니다.
                 </p>
+                </div>
               </li>
-              <li>
+              <li id="opt2">
+                <div>
                 <img src="./static/img/ico_mission_02.svg" alt="" />
                 <p class="tit">디지털 플랫폼</p>
                 <p class="desc">
                   전통적인 화폐 시장을 벗어난 새로운 금융 트렌드를 만들기 위해
                   블록체인 기술을 활용하고 간편한 디지털 월렛을 제공합니다.
                 </p>
+              </div>
               </li>
-              <li>
+              <li id="opt3">
+                <div>
                 <img src="./static/img/ico_mission_03.svg" alt="" />
                 <p class="tit">신뢰받는 기술</p>
                 <p class="desc">
@@ -106,8 +75,10 @@
                   기술에 대한 신뢰.<br /> 신뢰를 바탕으로 글로벌 기업으로
                   도약하겠습니다.
                 </p>
+              </div>
               </li>
-              <li>
+              <li id="opt4">
+                <div>
                 <img src="./static/img/ico_mission_04.svg" alt="" />
                 <p class="tit">글로벌 확장</p>
                 <p class="desc">
@@ -115,6 +86,7 @@
                   글로벌 최신 기술을 적용한 서비스 제공으로 대한민국을 넘어 글로벌
                   표준까지 이루어 내겠습니다.
                 </p>
+              </div>
               </li>
             </ul>
           </div>
@@ -207,34 +179,36 @@
           </section>
           <img class="bg_ico bg_circle_big" src="./static/img/ico_half_circle_big.svg" alt="">
         </div>
-        <footer class="footer">
-          <div class="inner-contents">
-            <img class="logo" src="./static/img/img_logo_white.png" alt="">
-            <div>
-              <ul>
-                <li>서울 마포구 월드컵북로56길 12, 10층 1호</li>
-                <li><em>고객센터</em><a href="tel:070-7841-1330">070-7841-1330</a> <a href="mailto:cs@eztechfin.co.kr">cs@eztechfin.co.kr</a></li>
-                <li><p class="copy">© 2022 (주)이지테크핀., All rights reserved.</p></li>
-              </ul>
-            </div>
-            <div>
-              <ul>
-                <li><em>대표이사</em>조성현</li>
-                <li><em>사업자등록번호</em>315-87-01407 사업자정보확인</li>
-                <li><em>통신판매업신고번호</em>제2022-서울마포-1771</li>
-              </ul>
-            </div>
-          </div>
-        </footer>
+        <default-footer></default-footer>
         
       </div>
       
     </div>
-    <script src="./static/js/lib/jquery-3.6.0.min.js"></script>
-    <script src="./static/js/lib/jquery.fullpage.min.js"></script>
-    <script src="./static/js/lib/scrolloverflow.js"></script>
-    <script src="./static/js/lib/masonry.pkgd.min.js"></script>
-    <script src="./static/js/ui/common.js"></script>
-    <script type="text/javascript"></script>
+    <script src="/static/js/lib/jquery-3.6.0.min.js"></script>
+    <script src="/static/js/ui/common.js"></script>
+    <script>
+      
+      const options = {
+        threshold: 0.3
+      }
+      
+      const opt1 = document.getElementById('opt1');
+      const opt2 = document.getElementById('opt2');
+      const opt3 = document.getElementById('opt3');
+      const opt4 = document.getElementById('opt4');
+      const arrOpt = [opt1,opt2,opt3,opt4]
+     
+      const io1 = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            $(entry.target).addClass('active')
+            observer.unobserve(entry.target)
+          }
+        })
+      }, options);
+      arrOpt.map(item => {
+        io1.observe(item);
+      })
+    </script>
   </body>
 </html>
