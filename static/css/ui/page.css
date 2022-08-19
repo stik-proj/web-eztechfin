@@ -437,6 +437,9 @@ body {
 .company .section04 .history_list {
   margin-top: 3.2rem;
 }
+.company .section04 .history_list > li {
+  opacity: 0;
+}
 .company .section04 .history_list li {
   position: relative;
   display: flex;
@@ -1896,4 +1899,19 @@ body {
 .mission_list li:nth-child(3).active,
 .mission_list li:nth-child(4).active {
   animation: 1s verticalRotateCard ease-in-out forwards;
+}
+@keyframes visibleContent {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+.company .history_list > li:nth-child(1).active,
+.company .history_list > li:nth-child(2).active,
+.company .history_list > li:nth-child(3).active,
+.company .history_list > li:nth-child(4).active {
+  animation: 1s visibleContent ease-in-out forwards;
 }

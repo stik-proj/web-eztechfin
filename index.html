@@ -6,6 +6,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
     />
+    <link rel="favicon" href="./favicon.ico" />
     <link rel="stylesheet" type="text/css" href="./static/css/ui/style.css" />
     <title>EZTECHFIN</title>
   </head>
@@ -104,7 +105,7 @@
               </p>
             </div>
             <ul class="history_list">
-              <li>
+              <li id="history01">
                 <div class="year">2019</div>
                 <div class="desc">
                   <p>법인 설립</p>
@@ -114,7 +115,7 @@
                   </ul>
                 </div>
               </li>
-              <li>
+              <li id="history02">
                 <div class="year">2020</div>
                 <div class="desc">
                   <p>법인명 변경</p>
@@ -129,7 +130,7 @@
                   </ul>
                 </div>
               </li>
-              <li>
+              <li id="history03">
                 <div class="year">2021</div>
                 <div class="desc">
                   <p>신규 서비스 개발</p>
@@ -143,7 +144,7 @@
                   </ul>
                 </div>
               </li>
-              <li>
+              <li id="history04">
                 <div class="year">2022</div>
                 <div class="desc">
                   <p>신사업 진출 계획 수립</p>
@@ -184,8 +185,8 @@
       </div>
       
     </div>
-    <script src="/static/js/lib/jquery-3.6.0.min.js"></script>
-    <script src="/static/js/ui/common.js"></script>
+    <script src="./static/js/lib/jquery-3.6.0.min.js"></script>
+    <script src="./static/js/ui/common.js"></script>
     <script>
       
       const options = {
@@ -208,6 +209,24 @@
       }, options);
       arrOpt.map(item => {
         io1.observe(item);
+      })
+
+      const history01 = document.getElementById('history01');
+      const history02 = document.getElementById('history02');
+      const history03 = document.getElementById('history03');
+      const history04 = document.getElementById('history04');
+      const arrOpt2 = [history01,history02,history03,history04]
+     
+      const io2 = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            $(entry.target).addClass('active')
+            observer.unobserve(entry.target)
+          }
+        })
+      }, options);
+      arrOpt2.map(item => {
+        io2.observe(item);
       })
     </script>
   </body>
