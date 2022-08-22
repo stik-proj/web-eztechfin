@@ -834,6 +834,7 @@ body {
   box-shadow: -2px 2px 8px rgba(6, 16, 34, 15%);
   border-radius: 4px;
   backface-visibility: hidden;
+  transform: rotateX(-180deg);
 }
 .service_list .box + .box {
   margin-top: 2.4rem;
@@ -877,7 +878,7 @@ body {
   }
   .service .section01 .bg01 {
     left: 50%;
-    top: 14%;
+    top: 16%;
     transform: translateX(-75rem);
   }
   .service .section01 .bg02 {
@@ -940,7 +941,7 @@ body {
   }
 }
 .service .section02 {
-  padding: 4.5rem 0;
+  padding: 8rem 0;
   background: url("../../img/bg_roadmap.png") 0 0 no-repeat;
   background-size: cover;
 }
@@ -1161,8 +1162,24 @@ body {
   margin-top: 2rem;
 }
 .recruit .recruit-info-item {
+  position: relative;
   display: flex;
   align-items: center;
+  max-width: 32.357rem;
+  padding: 3rem 2rem;
+  box-shadow: 0px 4px 20px #d0d7e2;
+  border-radius: 16px;
+  border-top-right-radius: 0;
+  overflow: hidden;
+}
+.recruit .recruit-info-item .process-step {
+  width: 10rem;
+  height: 10rem;
+  border-radius: 10rem;
+  background-color: #3276ff;
+  position: absolute;
+  right: -5rem;
+  top: -5rem;
 }
 .recruit .recruit-info-item + .recruit-info-item {
   margin-top: var(--16-pc-rem);
@@ -1184,7 +1201,7 @@ body {
     justify-content: space-between;
   }
   .recruit-info-list {
-    min-width: 530px;
+    min-width: 450px;
   }
   .recruit_inquiry .tit {
     font-size: var(--48-pc-rem);
@@ -1248,8 +1265,9 @@ body {
   .recruit .section01 {
     padding-top: 8rem;
     padding-bottom: 7.2rem;
-    background: url("/static/img/recruit_m_bg.png") top left / 20.7rem 26rem
+    background: url("/static/img/recruit_m_bg.png") top left 20% / 20.7rem 26rem
       no-repeat;
+    background-size: auto;
   }
 
   .recruit .section01 .tit,
@@ -1268,12 +1286,19 @@ body {
   }
 
   .recruit .section01 .inner-contents {
-    padding-right: 10px;
+    /* padding-right: 10px; */
   }
-
-  .recruit .section01 .tit,
-  .recruit .section01 .desc {
-    padding-left: 9rem;
+  .recruit .section01 .inner-contents > div:nth-child(1) {
+  }
+  .recruit .section01 .inner-contents > div:nth-child(1) img {
+    position: absolute;
+    left: 0%;
+    top: 0;
+    width: 40%;
+    transform: translateX(-17vw);
+  }
+  .recruit .section01 .inner-contents > div:nth-child(2) {
+    padding-left: 29%;
   }
 
   .recruit .section01 .desc {
@@ -1281,7 +1306,7 @@ body {
   }
 
   .hr-info-list {
-    padding: 3.2rem 2rem 4rem 2rem;
+    padding: 3.2rem 0rem 4rem 0rem;
   }
 
   .hr-info-item {
@@ -1383,7 +1408,9 @@ body {
     padding-bottom: var(--310-pc-rem);
     background: url("/static/img/recruit_pc_bg.png") center / cover no-repeat;
   }
-
+  .recruit .section01 .inner-contents {
+    display: flex;
+  }
   .recruit .section01 .tit,
   .recruit .section02 .tit,
   .recruit .section03 .tit {
@@ -1401,18 +1428,25 @@ body {
 
   .recruit .section01 .inner-contents {
     display: flex;
-    align-items: flex-end;
+    align-items: center;
   }
 
   .recruit .section01 .inner-contents > div {
-    padding-left: 30%;
+    /* padding-left: 30%; */
     max-width: 1240px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
   }
-
+  .recruit .section01 .inner-contents > div:nth-child(1) {
+    margin: 0 5rem;
+  }
+  .recruit .section01 .inner-contents > div:nth-child(1) img {
+  }
+  .recruit .section01 .inner-contents > div:nth-child(2) {
+    flex-shrink: 0;
+  }
   .recruit .section01 .tit {
     padding-right: var(--450-pc-rem);
   }
@@ -2024,7 +2058,7 @@ body {
   }
 }
 .service .section01 .bg01 {
-  animation: 1s slideLeftToRightCircle ease-in-out forwards;
+  animation: 1.5s slideLeftToRightCircle ease-in-out forwards;
 }
 .service .section01 .bg02 {
   animation: 1s slideRightToLeftCircle ease-in-out forwards;
@@ -2084,4 +2118,19 @@ body {
 }
 .contact-process-list li.active {
   animation: 1.4s verticalRotateCard ease-in-out forwards;
+}
+@keyframes recruitCircleScaleUp {
+  0% {
+    transform: scale(0);
+  }
+  80% {
+    transform: scale(1.03);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.recruit .section01 .bg01 {
+  animation: 1.4s recruitCircleScaleUp ease-in-out forwards;
+  transform-origin: left top;
 }
