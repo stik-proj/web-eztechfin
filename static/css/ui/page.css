@@ -1140,7 +1140,62 @@ body {
 .recruit .section03 {
   background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #f6f9ff 100%);
 }
+.recruit .section04 {
+  padding: 12rem 0;
+}
 
+.recruit_inquiry .tit {
+  font-size: 2rem;
+  line-height: 2.4rem;
+  font-weight: 800;
+  color: #282c34;
+}
+.recruit_inquiry .desc {
+  padding-top: 1.6rem;
+  font-size: 1.2rem;
+  line-height: 1.4rem;
+  color: #585d65;
+  letter-spacing: -0.02em;
+}
+.recruit-info-list {
+  margin-top: 2rem;
+}
+.recruit .recruit-info-item {
+  display: flex;
+  align-items: center;
+}
+.recruit .recruit-info-item + .recruit-info-item {
+  margin-top: var(--16-pc-rem);
+}
+
+.recruit .recruit-info-item .recruit-info-img {
+  width: var(--60-pc-rem);
+  height: var(--60-pc-rem);
+  margin-right: var(--12-pc-rem);
+}
+
+.recruit .recruit-info-item .recruit-info-content {
+  font-size: var(--16-pc-rem);
+  line-height: var(--28-pc-rem);
+}
+@media only screen and (min-width: 1024px) {
+  .recruit_inquiry {
+    display: flex;
+    justify-content: space-between;
+  }
+  .recruit-info-list {
+    min-width: 530px;
+  }
+  .recruit_inquiry .tit {
+    font-size: var(--48-pc-rem);
+    line-height: var(--58-pc-rem);
+  }
+  .recruit_inquiry .desc {
+    padding-top: var(--32-pc-rem);
+    font-size: var(--20-pc-rem);
+    line-height: 2rem;
+  }
+}
 .hr-info-item {
   display: flex;
   align-items: center;
