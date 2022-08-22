@@ -47,7 +47,7 @@
               <span class="m-block pc-block">인재상</span>
             </h3>
             <ul class="hr-info-list">
-              <li class="hr-info-item">
+              <li id="opt1" class="hr-info-item">
                 <div class="hr-keyword">
                   <p>열정적인</p>
                 </div>
@@ -60,7 +60,7 @@
                 </p>
                 <div class="hr-keyword-placeholder pc-show"></div>
               </li>
-              <li class="hr-info-item">
+              <li id="opt2" class="hr-info-item">
                 <div class="hr-keyword-placeholder pc-show"></div>
                 <p class="hr-info-content">
                   주어진 일에 최선을 다하고
@@ -75,7 +75,7 @@
                   <p>합리적인</p>
                 </div>
               </li>
-              <li class="hr-info-item">
+              <li id="opt3" class="hr-info-item">
                 <div class="hr-keyword">
                   <p>유연한</p>
                 </div>
@@ -103,7 +103,7 @@
               >
             </p>
             <ul class="reward-list">
-              <li class="reward-item">
+              <li id="list1" class="reward-item">
                 <img
                   class="reward-img"
                   src="../static/img/ico_recruit_01.svg"
@@ -119,7 +119,7 @@
                   </p>
                 </div>
               </li>
-              <li class="reward-item">
+              <li id="list2" class="reward-item">
                 <img
                   class="reward-img"
                   src="../static/img/ico_recruit_02.svg"
@@ -133,7 +133,7 @@
                   </p>
                 </div>
               </li>
-              <li class="reward-item">
+              <li id="list3" class="reward-item">
                 <img
                   class="reward-img"
                   src="../static/img/ico_recruit_03.svg"
@@ -155,7 +155,7 @@
                   alt="reward-placeholder1"
                 />
               </li>
-              <li class="reward-item">
+              <li id="list4" class="reward-item">
                 <img
                   class="reward-img"
                   src="../static/img/ico_recruit_04.svg"
@@ -171,7 +171,7 @@
                   </p>
                 </div>
               </li>
-              <li class="reward-item">
+              <li id="list5" class="reward-item">
                 <img
                   class="reward-img"
                   src="../static/img/ico_recruit_05.svg"
@@ -185,7 +185,7 @@
                   </p>
                 </div>
               </li>
-              <li class="reward-item">
+              <li id="list6" class="reward-item">
                 <img
                   class="reward-img"
                   src="../static/img/ico_recruit_06.svg"
@@ -199,7 +199,7 @@
                   </p>
                 </div>
               </li>
-              <li class="reward-item">
+              <li id="list7" class="reward-item">
                 <img
                   class="reward-img"
                   src="../static/img/ico_recruit_07.svg"
@@ -229,5 +229,48 @@
     </div>
     <script src="../static/js/lib/jquery-3.6.0.min.js"></script>
     <script src="../static/js/ui/common.js"></script>
+    <script>
+      const options = {
+        threshold: 0.3,
+      };
+
+      const opt1 = document.getElementById("opt1");
+      const opt2 = document.getElementById("opt2");
+      const opt3 = document.getElementById("opt3");
+      const arrOpt = [opt1, opt2, opt3];
+
+      const io1 = new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            $(entry.target).addClass("active");
+            observer.unobserve(entry.target);
+          }
+        });
+      }, options);
+      arrOpt.map((item) => {
+        io1.observe(item);
+      });
+
+      const list1 = document.getElementById("list1");
+      const list2 = document.getElementById("list2");
+      const list3 = document.getElementById("list3");
+      const list4 = document.getElementById("list4");
+      const list5 = document.getElementById("list5");
+      const list6 = document.getElementById("list6");
+      const list7 = document.getElementById("list7");
+      const arrlist = [list1, list2, list3, list4, list5, list6, list7];
+
+      const io2 = new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            $(entry.target).addClass("active");
+            observer.unobserve(entry.target);
+          }
+        });
+      }, options);
+      arrlist.map((item) => {
+        io2.observe(item);
+      });
+    </script>
   </body>
 </html>

@@ -31,7 +31,7 @@
             </div>
             <div class="service_list">
               <div>
-                <div class="box">
+                <div id="opt1" class="box">
                   <div class="img">
                     <img src="../static/img/img_phone_staika.png" alt="">
                   </div>
@@ -43,7 +43,7 @@
                     디파이 프로젝트로 생태계를 확장해 투자 환경을 조성합니다.<br />
                     Staika는 이지테크핀이 개발한 지갑에서 안전하게 보관됩니다.</p>
                 </div>
-                <div class="box">
+                <div id="opt2" class="box">
                   <span class="txt-blue">M2E(Move to Earn)</span>
                   <p class="tit">쉐르파(T2E 예정)</p>
                   <p class="desc">체험을 하며 보상을 받고 아이템을 강화하며<br />
@@ -54,7 +54,7 @@
                 </div>
               </div>
               <div>
-                <div class="box">
+                <div id="opt3" class="box">
                   <div class="img">
                     <img src="../static/img/img_phone_kiwi.png" alt="">
                   </div>
@@ -66,7 +66,7 @@
                     디파이 프로젝트로 생태계를 확장해 투자 환경을 조성합니다.<br />
                     Staika는 이지테크핀이 개발한 지갑에서 안전하게 보관됩니다.</p>
                 </div>
-                <div class="box">
+                <div id="opt4" class="box">
                   <span class="txt-blue">로보어드바이저</span>
                   <p class="tit">EZauto</p>
                   <p class="desc">매수와 매도 대상, 타이밍까지<br />
@@ -93,7 +93,7 @@
               <span class="m-block">한 발 먼저 성장해 나가며</span></span>
               시장의 모범이 되는 방향을 제시해 나아가겠습니다.
             </p>
-            <div class="wrap_roadmap">
+            <div id="history" class="wrap_roadmap">
               <div>
                 <div class="year">2022</div>
                 <ul class="list">
@@ -187,5 +187,44 @@
     </div>
     <script src="../static/js/lib/jquery-3.6.0.min.js"></script>
     <script src="../static/js/ui/common.js"></script>
+    <script>
+       const options = {
+        threshold: 0.3
+      }
+      
+      const opt1 = document.getElementById('opt1');
+      const opt2 = document.getElementById('opt2');
+      const opt3 = document.getElementById('opt3');
+      const opt4 = document.getElementById('opt4');
+      const arrOpt = [opt1,opt2,opt3,opt4]
+     
+      const io1 = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            $(entry.target).addClass('active')
+            observer.unobserve(entry.target)
+          }
+        })
+      }, options);
+      arrOpt.map(item => {
+        io1.observe(item);
+      })
+
+      const history01 = document.getElementById('history');
+      
+      const arrOpt2 = [history01,]
+     
+      const io2 = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            $(entry.target).addClass('active')
+            observer.unobserve(entry.target)
+          }
+        })
+      }, options);
+      arrOpt2.map(item => {
+        io2.observe(item);
+      })
+    </script>
   </body>
 </html>

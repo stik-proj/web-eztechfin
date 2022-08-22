@@ -26,7 +26,7 @@
             </p>
 
             <ul class="contact-process-list">
-              <li class="contact-process">
+              <li id="list1" class="contact-process">
                 <div class="contact-process-content">
                   <img class="step-img" src="/static/img/ico_contact_01.svg" alt="contact1">
                   <div>
@@ -41,7 +41,7 @@
                   <p class="process-step-number">1</p>
                 </div>
 
-                <li class="contact-process">
+                <li id="list2" class="contact-process">
                   <div class="contact-process-content">
                     <img class="step-img" src="/static/img/ico_contact_02.svg" alt="contact1">
                     <div>
@@ -57,7 +57,7 @@
                   </div>
                 </li>
 
-                <li class="contact-process">
+                <li id="list3" class="contact-process">
                   <div class="contact-process-content">
                     <img class="step-img" src="/static/img/ico_contact_03.svg" alt="contact1">
                     <div>
@@ -73,7 +73,7 @@
                   </div>
                 </li>
 
-                <li class="contact-process">
+                <li id="list4" class="contact-process">
                   <div class="contact-process-content">
                     <img class="step-img" src="/static/img/ico_contact_04.svg" alt="contact1">
                     <div>
@@ -89,7 +89,7 @@
                   </div>
                 </li>
 
-                <li class="contact-process">
+                <li id="list5" class="contact-process">
                   <div class="contact-process-content">
                     <img class="step-img" src="/static/img/ico_contact_05.svg" alt="contact1">
                     <div>
@@ -105,7 +105,7 @@
                   </div>
                 </li>
 
-                <li class="contact-process">
+                <li id="list6" class="contact-process">
                   <div class="contact-process-content">
                     <img class="step-img" src="/static/img/ico_contact_06.svg" alt="contact1">
                     <div>
@@ -158,12 +158,38 @@
           </div>
         </section>
         <section class="section section03">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d101180.24851072594!2d126.81910024971552!3d37.581378185809434!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357c9972997acc6d%3A0x7fc2ac5c7259b609!2z7Yq466Oo7YWN67mM65Sp!5e0!3m2!1sko!2skr!4v1660723738088!5m2!1sko!2skr" width="100%" height="900px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <div class="inner-contents"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d101180.24851072594!2d126.81910024971552!3d37.581378185809434!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357c9972997acc6d%3A0x7fc2ac5c7259b609!2z7Yq466Oo7YWN67mM65Sp!5e0!3m2!1sko!2skr!4v1660723738088!5m2!1sko!2skr" width="100%" height="600px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+          
         </section>
       </div>
       <default-footer></default-footer>
     </div>
     <script src="../static/js/lib/jquery-3.6.0.min.js"></script>
     <script src="../static/js/ui/common.js"></script>
+      <script>
+         const options = {
+            threshold: 0.3,
+          };
+          const list1 = document.getElementById("list1");
+          const list2 = document.getElementById("list2");
+          const list3 = document.getElementById("list3");
+          const list4 = document.getElementById("list4");
+          const list5 = document.getElementById("list5");
+          const list6 = document.getElementById("list6");
+          
+          const arrlist = [list1, list2, list3, list4, list5, list6,];
+
+          const io1 = new IntersectionObserver((entries, observer) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                $(entry.target).addClass("active");
+                observer.unobserve(entry.target);
+              }
+            });
+          }, options);
+          arrlist.map((item) => {
+            io1.observe(item);
+          });
+      </script>
   </body>
 </html>
