@@ -207,8 +207,13 @@ body {
   }
   .gnb .btn-close {
     position: absolute;
-    right: 2rem;
-    top: 2rem;
+    left: 50%;
+    top: 6rem;
+    width: 4rem;
+    height: 4rem;
+    margin-left: -2rem;
+    background: #3276ff;
+    border-radius: 4rem;
   }
   .gnb .btn-close .mdi {
     font-size: 7vw;
@@ -250,7 +255,7 @@ body {
   color: #646674;
 }
 .company .section01 {
-  padding: 10rem 0 5rem;
+  padding: 12rem 0 7rem;
 }
 .company .section01 .tit {
   font-size: 2.4rem;
@@ -266,7 +271,7 @@ body {
   position: absolute;
   right: 0;
   top: 0;
-  transform: translate(50%, -73%);
+  transform: translate(50%, -84%);
   z-index: 1;
 }
 .company .section01 .bg02 {
@@ -280,7 +285,7 @@ body {
   position: absolute;
   left: 50%;
   top: 100%;
-  width: 7.2rem;
+  width: 5.2rem;
   transform: translate(-50%, 5rem);
 }
 .company .section02 {
@@ -289,8 +294,8 @@ body {
 }
 .company .section02 .tit {
   margin-top: 5rem;
-  font-size: 1.4rem;
-  line-height: 1.6rem;
+  font-size: 1.8rem;
+  line-height: 2.4rem;
   font-weight: 700;
 }
 .company .section02 .desc {
@@ -336,8 +341,12 @@ body {
     line-height: 2rem;
   }
 }
+.company .section02 + .section03 {
+  padding: 12rem 0;
+}
 .company .section03 .mission_list {
   margin-top: 3.2rem;
+  padding-left: 4rem;
 }
 .company .section03 .mission_list li {
   position: relative;
@@ -352,7 +361,7 @@ body {
   position: relative;
   z-index: 2;
 }
-.company .section03 .mission_list li:before {
+/* .company .section03 .mission_list li:before {
   position: absolute;
   left: 0;
   top: 0;
@@ -361,7 +370,7 @@ body {
   background: #fff;
   content: "";
   z-index: 1;
-}
+} */
 
 .company .section03 .mission_list li + li {
   margin-top: 2.4rem;
@@ -386,6 +395,7 @@ body {
 @media only screen and (min-width: 1024px) {
   .company .section03 .mission_list {
     text-align: center;
+    padding-left: 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -432,7 +442,7 @@ body {
   }
 }
 .company .section04 {
-  z-index: 8;
+  z-index: 18;
 }
 .company .section04 .history_list {
   margin-top: 3.2rem;
@@ -718,7 +728,8 @@ body {
 .section03 .bg_shape_01 {
   position: absolute;
   left: 0%;
-  top: 10%;
+  top: 20%;
+  width: 65%;
 }
 .section03 .bg_shape_02 {
   position: absolute;
@@ -746,9 +757,9 @@ body {
 .bg_circle_big {
   position: absolute;
   right: 0;
-  bottom: 54rem;
+  bottom: 56rem;
   z-index: 9;
-  width: 12rem;
+  width: 10rem;
 }
 @media only screen and (min-width: 1024px) {
   .section03 .bg_ico,
@@ -797,20 +808,28 @@ body {
 
 /* 서비스 */
 .service .section01 {
+  position: relative;
   padding: 8rem 0;
 }
 .service .section01 .bg01,
-.service .section01 .bg02 {
+.service .section01 .bg02,
+.service .section01 .bg03 {
   position: absolute;
 }
 .service .section01 .bg01 {
   left: -12%;
-  top: 9%;
+  top: 17%;
   width: 70%;
 }
 .service .section01 .bg02 {
   right: -14%;
-  top: 2%;
+  top: 4%;
+  width: 70%;
+  transform: rotateY(180deg);
+}
+.service .section01 .bg03 {
+  right: 0;
+  top: 100%;
   width: 70%;
   transform: rotateY(180deg);
 }
@@ -820,9 +839,12 @@ body {
 .service_list {
 }
 .service_list > div {
-  margin-top: 7.5rem;
+  margin-top: 14.5rem;
   width: 100%;
   text-align: center;
+}
+.service_list > div + div {
+  margin-top: 10rem;
 }
 .service_list .box {
   display: inline-block;
@@ -840,6 +862,7 @@ body {
   margin-top: 2.4rem;
 }
 .service_list .box .img {
+  margin-top: -10rem;
   text-align: center;
 }
 .service_list .box .btn {
@@ -851,19 +874,19 @@ body {
 }
 .service_list .box span {
   display: inline-block;
-  padding-left: 1rem;
+
   font-weight: 700;
   font-size: 0.9rem;
 }
 .service_list .box .tit {
   margin-top: 0.6rem;
-  padding-left: 1rem;
+
   font-weight: 700;
   font-size: 1.4rem;
   color: #282c34;
 }
 .service_list .box .desc {
-  margin-top: 4.8rem;
+  margin-top: 1.8rem;
   font-weight: 400;
   font-size: 1.1rem;
   line-height: 1.4rem;
@@ -894,9 +917,9 @@ body {
     margin-top: 5.857rem;
     justify-content: center;
   }
-  .service_list > div:last-child {
+  .service_list > div:first-child {
     margin-top: 23.928rem;
-    margin-left: 5.714rem;
+    margin-right: 5.714rem;
   }
   .service_list .box {
     padding: 4.285rem 3.428rem;
@@ -909,6 +932,9 @@ body {
 
   .service_list .box + .box .desc {
     margin-top: 3.285rem;
+  }
+  .service_list .box .img {
+    margin-top: 0;
   }
   .service_list .box img {
     position: absolute;
@@ -941,7 +967,7 @@ body {
   }
 }
 .service .section02 {
-  padding: 8rem 0;
+  padding: 10rem 0;
   background: url("../../img/bg_roadmap.png") 0 0 no-repeat;
   background-size: cover;
 }
@@ -1056,14 +1082,14 @@ body {
     flex-direction: column;
   }
   .wrap_roadmap > div:nth-child(1) {
-    margin-top: 18rem;
+    margin-top: 12rem;
   }
   .wrap_roadmap > div:nth-child(2) {
-    margin-top: 4rem;
+    margin-top: 0;
   }
 
   .wrap_roadmap > div:nth-child(3) {
-    margin-top: -10rem;
+    margin-top: -12rem;
   }
   .wrap_roadmap > div .year {
     width: 12.857rem;
@@ -1292,10 +1318,9 @@ body {
   }
   .recruit .section01 .inner-contents > div:nth-child(1) img {
     position: absolute;
-    left: 0%;
+    left: -15%;
     top: 0;
     width: 40%;
-    transform: translateX(-17vw);
   }
   .recruit .section01 .inner-contents > div:nth-child(2) {
     padding-left: 29%;
@@ -1319,7 +1344,7 @@ body {
   }
 
   .hr-info-item .hr-keyword {
-    margin: 0 5rem;
+    margin-right: 5rem;
     width: 5.6rem;
     height: 5.6rem;
     font-size: 1.2rem;
@@ -1349,13 +1374,15 @@ body {
 
   .hr-info-item:nth-child(even) .hr-keyword::before,
   .hr-info-item:nth-child(even) .hr-keyword::after {
-    left: -2.1rem;
+    right: -2.1rem;
   }
 
   .hr-info-item .hr-info-content {
+    width: 15rem;
     font-size: 1.1rem;
     line-height: 1.4rem;
     letter-spacing: -0.02em;
+    order: 2;
   }
 
   .recruit .section03 {
@@ -1512,14 +1539,14 @@ body {
 
   .hr-info-item .hr-info-content {
     margin: 0 10rem;
-    font-size: 1.1rem;
-    line-height: 1.4rem;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
     letter-spacing: -0.02em;
     min-width: 350px;
   }
 
   .recruit .section03 {
-    padding-top: var(--120-pc-rem);
+    padding-top: 12rem;
     padding-bottom: var(--200-pc-rem);
   }
 
@@ -1790,25 +1817,18 @@ body {
     overflow: hidden;
     max-width: 520px;
     width: 45%;
+    margin-bottom: 5rem;
     min-height: 326px;
     flex-shrink: 0;
     backface-visibility: hidden;
   }
 
   .contact-process:nth-child(2) {
-    margin-top: var(--110-pc-rem);
+    /* margin-top: var(--110-pc-rem); */
   }
 
   .contact-process:nth-child(2n) {
     margin-left: var(--80-pc-rem);
-  }
-
-  .contact-process:nth-child(2n + 3) {
-    margin-top: calc(-1 * var(--50-pc-rem));
-  }
-
-  .contact-process:nth-child(2n + 4) {
-    margin-top: var(--60-pc-rem);
   }
 
   .contact-process .contact-process-content {
@@ -1827,7 +1847,10 @@ body {
     padding-left: var(--16-pc-rem);
     letter-spacing: -0.02em;
   }
-
+  .contact-process .contact-process-content .tit span {
+    color: #3276ff;
+    /* margin-right: 1rem; */
+  }
   .contact-process .contact-process-content .desc {
     font-size: var(--20-pc-rem);
     line-height: var(--28-pc-rem);
@@ -1898,13 +1921,13 @@ body {
 
 @keyframes circleOneScaleUp {
   0% {
-    transform: translate(50%, -73%) scale(0);
+    transform: translate(50%, -84%) scale(0);
   }
   80% {
-    transform: translate(50%, -73%) scale(1.03);
+    transform: translate(50%, -84%) scale(1.03);
   }
   100% {
-    transform: translate(50%, -73%) scale(1);
+    transform: translate(50%, -84%) scale(1);
   }
 }
 @keyframes circleTwoScaleUp {
@@ -1922,14 +1945,14 @@ body {
 }
 @keyframes circleThreeScaleUp {
   0% {
-    transform: translate(-50%, 5rem) scale(0);
+    transform: translate(-50%, 9rem) scale(0);
   }
   80% {
-    transform: translate(-50%, 5rem) scale(1.03);
+    transform: translate(-50%, 9rem) scale(1.03);
     opacity: 1;
   }
   100% {
-    transform: translate(-50%, 5rem) scale(1);
+    transform: translate(-50%, 9rem) scale(1);
     opacity: 1;
   }
 }

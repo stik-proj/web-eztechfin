@@ -98,7 +98,7 @@ ui.page.common.prototype = {
                 </li>
               </ul>
               <button class="btn btn-close _closeMobileGnbMenu">
-                <i class="mdi mdi-close"></i>
+                <img src="/static/img/ico_close.svg" alt="" />
               </button>
             </nav>
           </div>
