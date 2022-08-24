@@ -92,8 +92,8 @@ body {
 
 .logo a {
   display: block;
-  width: 180px;
-  height: 36px;
+  width: 192px;
+  height: 42px;
   background: url("../../img/img_logo.png") 0 0 no-repeat;
   background-size: contain;
   text-indent: -9999px;
@@ -111,13 +111,25 @@ body {
   left: 0;
   top: 0;
   right: 0;
-  padding: 1rem 0;
+  /* padding: 1.5rem 0; */
   transition: all 0.5s;
   z-index: 900;
 }
 .header.active {
   background: #fff;
   box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.1);
+}
+@media only screen and (min-width: 1024px) {
+  .header {
+    padding: 2.5rem 0;
+  }
+  .header.active {
+    padding: 1.5rem 0;
+  }
+  .header.active .logo a {
+    width: 180px;
+    height: 36px;
+  }
 }
 .header .inner-contents {
   display: flex;
@@ -137,7 +149,7 @@ body {
 }
 .gnb > ul li a {
   font-size: 1.2rem;
-  font-weight: 400;
+  font-weight: 500;
   letter-spacing: 0.4px;
   color: #000;
 }
@@ -228,9 +240,11 @@ body {
 .section-desc {
   margin-top: 1.4rem;
   font-weight: 400;
-  font-size: 1.1rem;
-  line-height: 1.4rem;
+  font-size: 1.4rem;
+  line-height: 2rem;
   color: #585d65;
+  letter-spacing: 0.1px;
+  word-break: keep-all;
 }
 @media only screen and (min-width: 1024px) {
   .section-title {
@@ -239,8 +253,8 @@ body {
   }
   .section-desc {
     margin-top: 2rem;
-    font-size: 1.428rem;
-    line-height: 2rem;
+    font-size: 1.571rem;
+    line-height: 2.4rem;
   }
 }
 .company .section {
@@ -264,14 +278,18 @@ body {
 }
 .company .section01 .desc {
   margin-top: 1.4rem;
-  font-size: 1.1rem;
-  line-height: 1.4rem;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  letter-spacing: 0.1px;
+}
+.company .section01 .desc span {
+  letter-spacing: 0.1px;
 }
 .company .section01 .bg01 {
   position: absolute;
   right: 0;
   top: 0;
-  transform: translate(50%, -84%);
+  transform: translate(50%, -92%);
   z-index: 1;
 }
 .company .section01 .bg02 {
@@ -293,19 +311,19 @@ body {
   text-align: center;
 }
 .company .section02 .tit {
-  margin-top: 5rem;
-  font-size: 1.8rem;
+  margin-top: 0rem;
+  font-size: 1.5rem;
   line-height: 2.4rem;
   font-weight: 700;
 }
 .company .section02 .desc {
   margin-top: 1.1rem;
-  font-size: 1.1rem;
-  line-height: 1.4rem;
+  font-size: 1.4rem;
+  line-height: 2rem;
 }
 @media only screen and (min-width: 1024px) {
   .company .section01 {
-    padding: 28.6rem 0 15rem;
+    padding: 28.6rem 0 20rem;
   }
   .company .section01 .tit {
     position: relative;
@@ -314,7 +332,7 @@ body {
     z-index: 100;
   }
   .company .section01 .desc {
-    font-size: 1.428rem;
+    font-size: 1.571rem;
     line-height: 2rem;
   }
   .company .section01 .bg01 {
@@ -323,21 +341,21 @@ body {
   .company .section01 .bg02 {
     display: block;
     opacity: 0;
-    transform: translate(-18rem, -21rem);
+    transform: translate(-25rem, -21rem);
   }
   .company .section01 .bg03 {
-    transform: translate(-50%, 10rem);
+    transform: translate(-50%, 20rem);
   }
   .company .section02 {
     padding: 3rem 0;
   }
   .company .section02 .tit {
     font-size: 2.857rem;
-    line-height: 3.428rem;
+    line-height: 4.4rem;
   }
   .company .section02 .desc {
     margin-top: 2.2rem;
-    font-size: 1.428rem;
+    font-size: 1.571rem;
     line-height: 2rem;
   }
 }
@@ -534,7 +552,7 @@ body {
   padding-left: 0.8rem;
   font-weight: 400;
   font-size: 1.1rem;
-  line-height: 1.4rem;
+  line-height: 1.6rem;
   color: #282c34;
 }
 .company .section04 .history_list li .desc ul li:before {
@@ -545,7 +563,7 @@ body {
   height: 0.2rem;
   margin-top: -0.1rem;
   background: #282c34;
-  border-radius: 100%;
+  border-radius: 0.2rem;
   content: "";
 }
 .company .section04 .history_list > li + li {
@@ -601,6 +619,10 @@ body {
     margin-top: 5.5714rem;
     font-size: 2.285rem;
   }
+  .company .section04 .history_list li .desc ul + p {
+    margin-top: 2rem;
+    font-size: 2rem;
+  }
   .company .section04 .history_list li .desc ul {
     margin-top: 1.1428rem;
     margin-left: 0.8rem;
@@ -611,9 +633,7 @@ body {
     line-height: 2rem;
   }
   .company .section04 .history_list li .desc ul li:before {
-    width: 5px;
-    height: 5px;
-    margin-top: -2.5px;
+    display: none;
   }
 }
 .company .section05 {
@@ -888,8 +908,8 @@ body {
 .service_list .box .desc {
   margin-top: 1.8rem;
   font-weight: 400;
-  font-size: 1.1rem;
-  line-height: 1.4rem;
+  font-size: 1.3rem;
+  line-height: 1.8rem;
 }
 @media only screen and (min-width: 1024px) {
   .service .section01 {
@@ -1051,7 +1071,7 @@ body {
   position: relative;
   padding-left: 0.8rem;
   font-weight: 400;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   line-height: 1.4rem;
   color: #282c34;
 }
@@ -1179,8 +1199,8 @@ body {
 }
 .recruit_inquiry .desc {
   padding-top: 1.6rem;
-  font-size: 1.2rem;
-  line-height: 1.4rem;
+  font-size: 1.4rem;
+  line-height: 2rem;
   color: #585d65;
   letter-spacing: -0.02em;
 }
@@ -1218,8 +1238,11 @@ body {
 }
 
 .recruit .recruit-info-item .recruit-info-content {
-  font-size: var(--16-pc-rem);
+  font-size: var(--20-pc-rem);
   line-height: var(--28-pc-rem);
+}
+.recruit .recruit-info-item .recruit-info-content a {
+  letter-spacing: 0.5px;
 }
 @media only screen and (min-width: 1024px) {
   .recruit_inquiry {
@@ -1307,8 +1330,9 @@ body {
   .recruit .section02 .desc,
   .recruit .section03 .desc {
     padding-top: 1.6rem;
-    font-size: 1.1rem;
-    line-height: 1.4rem;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    word-break: keep-all;
   }
 
   .recruit .section01 .inner-contents {
@@ -1379,9 +1403,10 @@ body {
 
   .hr-info-item .hr-info-content {
     width: 15rem;
-    font-size: 1.1rem;
-    line-height: 1.4rem;
+    font-size: 1.4rem;
+    line-height: 2rem;
     letter-spacing: -0.02em;
+    word-break: keep-all;
     order: 2;
   }
 
@@ -1683,8 +1708,8 @@ body {
   .contact .section01 .desc,
   .contact .section02 .desc {
     padding-top: 1.6rem;
-    font-size: 1.1rem;
-    line-height: 1.4rem;
+    font-size: 1.4rem;
+    line-height: 2rem;
   }
 
   .contact-process-list {
@@ -1723,8 +1748,9 @@ body {
   }
 
   .contact-process .contact-process-content .desc {
-    font-size: 1.1rem;
-    line-height: 1.4rem;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    word-break: keep-all;
     padding-top: 0.8rem;
   }
 
@@ -1766,8 +1792,8 @@ body {
   }
 
   .contact .contact-info-item .contact-info-content {
-    font-size: 1.1rem;
-    line-height: 1.4rem;
+    font-size: 1.4rem;
+    line-height: 2rem;
   }
 
   .contact .section03 {
@@ -1945,14 +1971,14 @@ body {
 }
 @keyframes circleThreeScaleUp {
   0% {
-    transform: translate(-50%, 9rem) scale(0);
+    transform: translate(-50%, 5rem) scale(0);
   }
   80% {
-    transform: translate(-50%, 9rem) scale(1.03);
+    transform: translate(-50%, 5rem) scale(1.03);
     opacity: 1;
   }
   100% {
-    transform: translate(-50%, 9rem) scale(1);
+    transform: translate(-50%, 5rem) scale(1);
     opacity: 1;
   }
 }
@@ -1970,27 +1996,27 @@ body {
   }
   @keyframes circleTwoScaleUp {
     0% {
-      transform: translate(-18rem, -21rem) scale(0);
+      transform: translate(-26rem, -21rem) scale(0);
     }
     80% {
-      transform: translate(-18rem, -21rem) scale(1.03);
+      transform: translate(-26rem, -21rem) scale(1.03);
       opacity: 1;
     }
     100% {
-      transform: translate(-18rem, -21rem) scale(1);
+      transform: translate(-26rem, -21rem) scale(1);
       opacity: 1;
     }
   }
   @keyframes circleThreeScaleUp {
     0% {
-      transform: translate(-50%, 10rem) scale(0);
+      transform: translate(-50%, 15rem) scale(0);
     }
     80% {
-      transform: translate(-50%, 10rem) scale(1.03);
+      transform: translate(-50%, 15rem) scale(1.03);
       opacity: 1;
     }
     100% {
-      transform: translate(-50%, 10rem) scale(1);
+      transform: translate(-50%, 15rem) scale(1);
       opacity: 1;
     }
   }
