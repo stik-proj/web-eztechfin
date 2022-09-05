@@ -410,6 +410,7 @@ body {
   color: #282c34;
   word-break: keep-all;
 }
+
 @media only screen and (min-width: 1024px) {
   .company .section03 .mission_list {
     text-align: center;
@@ -430,18 +431,18 @@ body {
   }
   .company .section03 .mission_list li:nth-child(1) {
     margin-top: 0;
-    order: 1;
+    order: 2;
   }
   .company .section03 .mission_list li:nth-child(2) {
-    order: 2;
-    /* margin-top: 17.57rem; */
+    order: 1;
+    margin-top: 17.57rem;
   }
   .company .section03 .mission_list li:nth-child(3) {
-    order: 3;
-    /* margin-top: -12.714rem; */
+    order: 4;
+    margin-top: -12.714rem;
   }
   .company .section03 .mission_list li:nth-child(4) {
-    order: 4;
+    order: 3;
   }
   .company .section03 .mission_list li + li {
     margin-top: 5.714rem;
@@ -457,6 +458,23 @@ body {
   .company .section03 .mission_list li .desc {
     font-size: 1.428rem;
     line-height: 2rem;
+  }
+}
+@media only screen and (max-width: 1250px){
+  .company .section03 .mission_list li:nth-child(1) {
+    margin-top: 0;
+    order: 1;
+  }
+  .company .section03 .mission_list li:nth-child(2) {
+    order: 2;
+    margin-top: 5.714rem;;
+  }
+  .company .section03 .mission_list li:nth-child(3) {
+    order: 3;
+    margin-top: 5.714rem;
+  }
+  .company .section03 .mission_list li:nth-child(4) {
+    order: 4;
   }
 }
 .company .section04 {
