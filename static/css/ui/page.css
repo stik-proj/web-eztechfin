@@ -486,10 +486,10 @@ body {
   } 
 }
 @media only screen and (max-width:1024px){
-  #opt2 {
+  .company .section03 .mission_list li.mission_opt2 {
     margin-top: 2.4rem;
   }
-  #opt3 {
+  .company .section03 .mission_list li.mission_opt3 {
     margin-top: 2.4rem;
   }
 }
@@ -1674,7 +1674,7 @@ body {
   .reward-list .reward-item:nth-child(n + 3){
     margin-top: var(--64-pc-rem);
   }
-  #ico2{
+  .reward-list .reward-placeholder.pc-show.ico2 {
     display:none;
   }
 }
