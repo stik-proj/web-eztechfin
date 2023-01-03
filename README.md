@@ -1,2 +1,2 @@
-# web-landing
+# web-eztechfin
 https://eztechfin.co.kr/
