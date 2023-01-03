@@ -1,2 +1,2 @@
 # web-landing
-www.staika.io
+https://eztechfin.co.kr/
