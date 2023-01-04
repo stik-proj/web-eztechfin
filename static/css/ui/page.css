@@ -24,6 +24,12 @@ body {
 .txt-green {
   color: #b3da2e;
 }
+.txt-darkturquoise {
+  color: #00C7D3;
+}
+.txt-dodgerblue {
+  color: #006ED3;
+}
 
 .btn {
   display: inline-block;
@@ -53,6 +59,15 @@ body {
   color: #fff;
   background: #b3da2e;
 }
+.btn.btn-darkturquoise {
+  color: #fff;
+  background: #00C7D3;
+}
+.btn.btn-dodgerblue {
+  color: #fff;
+  background: #1077D5;
+}
+
 .m-gnb-menu,
 .btn-close {
   display: none;
@@ -945,6 +960,11 @@ body {
   font-size: 1.3rem;
   line-height: 1.8rem;
 }
+@media only screen and (max-width: 1024px) {
+  .service_list > div > div:first-child {
+    margin-bottom: calc(10rem - 2.4rem);
+  }
+}
 @media only screen and (min-width: 1024px) {
   .service .section01 {
     padding: var(--180-pc-rem) 0 10rem;
@@ -972,8 +992,14 @@ body {
     justify-content: center;
   }
   .service_list > div:first-child {
-    margin-top: 23.928rem;
+    margin-top: 10rem;
     margin-right: 5.714rem;
+  }
+  .service_list > div + div {
+    margin-top: 30rem;
+  }
+  .service_list > div > div:first-child {
+    margin-bottom: 15rem;
   }
   .service_list .box {
     padding: 4.285rem 3.428rem;
@@ -985,7 +1011,7 @@ body {
   }
 
   .service_list .box + .box .desc {
-    margin-top: 3.285rem;
+    margin-top: 7.285rem;
   }
   .service_list .box .img {
     margin-top: 0;
