@@ -702,7 +702,7 @@ body {
   float: left;
   width: 48%;
   margin-bottom: 2rem;
-  padding: 1.5rem 3rem;
+  /* padding: 1.5rem 3rem; */
   align-items: center;
   justify-content: center;
   height: 9.68rem;
