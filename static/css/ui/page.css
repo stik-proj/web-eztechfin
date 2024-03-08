@@ -277,7 +277,7 @@ body {
   z-index: 100;
 }
 .company .section + .section {
-  padding: 4rem 0;
+  /* padding: 11rem 0; */
 }
 .company .section .desc {
   font-weight: 400;
@@ -512,6 +512,7 @@ body {
 }
 .company .section04 .history_list {
   margin-top: 3.2rem;
+  /* margin-bottom: 14rem; */
 }
 .company .section04 .history_list > li {
   opacity: 0;
@@ -686,6 +687,7 @@ body {
 }
 .company .section05 {
   background: rgba(255, 255, 255, 0.9);
+  /* margin-top: 8rem; */
 }
 .company .section05 .text-center {
   text-align: center;
@@ -715,7 +717,7 @@ body {
 }
 @media only screen and (min-width: 1024px) {
   .company .section05 {
-    padding: 9.142rem 0;
+    padding: 11.428rem 0;
   }
   .company .section05 .partner_list {
     overflow: initial;
@@ -876,7 +878,7 @@ body {
   .bg_circle_big {
     width: auto;
     right: 0;
-    bottom: 10%;
+    bottom: 20%;
   }
 }
 
